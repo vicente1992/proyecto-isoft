@@ -4,7 +4,7 @@
       <div class="card top-selling">
         <div class="card-body pb-0">
           <h5 class="card-title">Ventas realizadas</h5>
-          <table class="table table-borderless">
+          <table class="table table-borderless" v-if="listSales.length > 0">
             <thead>
               <tr>
                 <th scope="col">Cliente</th>

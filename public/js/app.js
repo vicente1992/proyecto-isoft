@@ -40163,46 +40163,48 @@ var render = function () {
             _vm._v("Ventas realizadas"),
           ]),
           _vm._v(" "),
-          _c("table", { staticClass: "table table-borderless" }, [
-            _vm._m(0),
-            _vm._v(" "),
-            _c(
-              "tbody",
-              _vm._l(_vm.listSales, function (sale) {
-                return _c("tr", { key: sale.id }, [
-                  _c("td", [_vm._v(_vm._s(sale.customer))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(sale.id_customer))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(sale.sellerName))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(sale.amount))]),
-                  _vm._v(" "),
-                  _c("td", [_vm._v(_vm._s(sale.created_at))]),
-                  _vm._v(" "),
-                  _c("td", [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "btn btn-secondary btn-xs",
-                        attrs: {
-                          "data-bs-toggle": "modal",
-                          "data-bs-target": "#largeModal",
-                        },
-                        on: {
-                          click: function ($event) {
-                            return _vm.getDetial(sale)
+          _vm.listSales.length > 0
+            ? _c("table", { staticClass: "table table-borderless" }, [
+                _vm._m(0),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.listSales, function (sale) {
+                    return _c("tr", { key: sale.id }, [
+                      _c("td", [_vm._v(_vm._s(sale.customer))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(sale.id_customer))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(sale.sellerName))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(sale.amount))]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v(_vm._s(sale.created_at))]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "btn btn-secondary btn-xs",
+                            attrs: {
+                              "data-bs-toggle": "modal",
+                              "data-bs-target": "#largeModal",
+                            },
+                            on: {
+                              click: function ($event) {
+                                return _vm.getDetial(sale)
+                              },
+                            },
                           },
-                        },
-                      },
-                      [_c("i", { staticClass: "fas fa-eye" })]
-                    ),
-                  ]),
-                ])
-              }),
-              0
-            ),
-          ]),
+                          [_c("i", { staticClass: "fas fa-eye" })]
+                        ),
+                      ]),
+                    ])
+                  }),
+                  0
+                ),
+              ])
+            : _vm._e(),
         ]),
       ]),
       _vm._v(" "),
