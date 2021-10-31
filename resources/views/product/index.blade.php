@@ -32,6 +32,7 @@
                                         <th scope="col">Descripción</th>
                                         <th scope="col">Precio</th>
                                         <th scope="col">Cantidad</th>
+                                        <th scope="col">Estado</th>
                                         <th scope="col">Acción</th>
                                     </tr>
                                 </thead>
@@ -43,14 +44,21 @@
                                         </th>
                                         <td> {{$product->name}} </td>
                                         <td> {{$product->description}} </td>
-                                        <td> {{"$ " . number_format($product->price, 0, ",", ".")  }} </td>
+                                        <td> {{"$ " . number_format($product->price, 0, ",", ".") }} </td>
                                         <td> {{$product->quantity}} </td>
+                                        <td>
+                                            @if ($product->quantity > 0)
+                                            <span class="badge bg-success">Disponible</span>
+                                            @else
+                                            <span class="badge bg-danger">Agotado</span>
+                                            @endif
+                                        </td>
                                         <td>
                                             <div class="d-flex">
                                                 <a class="btn btn-secondary btn-sm mx-2"
                                                     href=" {{ route('product.edit', $product->id) }}"><i
                                                         class="fas fa-pen"></i></a>
-
+                                                @if (Auth::user()->role ==='admin')
                                                 <form action="{{route('product.destroy',$product->id)}}" method="POST">
                                                     @csrf
                                                     @method('DELETE')
@@ -58,7 +66,7 @@
                                                         <i class="far fa-trash-alt"></i>
                                                     </button>
                                                 </form>
-
+                                                @endif
                                             </div>
                                         </td>
 

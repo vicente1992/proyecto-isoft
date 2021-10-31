@@ -3,6 +3,8 @@
 use App\Http\Controllers\BillsController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\SalesController;
+use App\Http\Controllers\SalesReportController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -26,4 +28,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('user', userController::class);
 Route::resource('product', ProductController::class);
+// Route::resource('product/list', [ProductController::class, 'getProducts']);
 Route::resource('bills', BillsController::class);
+Route::resource('sales', SalesController::class);
+Route::resource('reports', SalesReportController::class);

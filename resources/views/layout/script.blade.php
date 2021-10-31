@@ -1,4 +1,5 @@
 <!-- Vendor JS Files -->
+
 <script src="{{asset('assets/vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
 <script src="{{asset('assets/vendor/quill/quill.min.js')}}"></script>
 <script src="{{asset('assets/vendor/tinymce/tinymce.min.js')}}"></script>

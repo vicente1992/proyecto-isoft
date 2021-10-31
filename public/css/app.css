@@ -10004,3 +10004,8 @@ h3 {
     border-color: #dee2e6;
   }
 }
+
+.form-report{
+  border:1px solid red !important;
+  display:flex;
+}

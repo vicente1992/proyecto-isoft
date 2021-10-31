@@ -49,7 +49,9 @@
                                     <i class="bi bi-currency-dollar"></i>
                                 </div>
                                 <div class="ps-3">
-                                    <h6>$3,264</h6>
+                                    <h6>
+                                        {{"$ " . number_format($data->sales, 0, ",", ".") }}
+                                    </h6>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +74,7 @@
                                 </div>
                                 <div class="ps-3">
                                     <h6>
-                                        {{"$ " . number_format($data->bills, 0, ",", ".")  }}
+                                        {{"$ " . number_format($data->bills, 0, ",", ".") }}
                                     </h6>
                                 </div>
                             </div>
