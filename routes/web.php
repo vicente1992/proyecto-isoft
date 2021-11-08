@@ -27,8 +27,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('user', userController::class);
+//  Route::resource('product/list', [ProductController::class, 'getProducts']);
 Route::resource('product', ProductController::class);
-// Route::resource('product/list', [ProductController::class, 'getProducts']);
 Route::resource('bills', BillsController::class);
 Route::resource('sales', SalesController::class);
 Route::resource('reports', SalesReportController::class);

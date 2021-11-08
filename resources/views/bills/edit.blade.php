@@ -25,7 +25,7 @@
             @endif
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Fomulario de productos</h5>
+                    <h5 class="card-title">Fomulario de egresos</h5>
                     <form action="{{ route('bills.update', $bill->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')

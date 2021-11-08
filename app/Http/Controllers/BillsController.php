@@ -46,7 +46,6 @@ class BillsController extends Controller
             'total_amount' => $total_amount,
         ]);
 
-
         return redirect()->route('bills.index')->with('message', 'Egreso agregado satisfactoriamente');
     }
 

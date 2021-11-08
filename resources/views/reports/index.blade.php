@@ -48,11 +48,11 @@
         series: [{
         name: 'Ingresos',
         data: dataGraph.dataSales,
-        // data: [31, 40, 28, 51, 42, 82, 56],
+        // data: [31, 40, 28, 51, 42, 82, 56, 66, 76, 87, 98],
         }, {
         name: 'Egresos',
         data: dataGraph.dataBills,
-        // data: [11, 32, 45, 32, 34, 52, 41]
+        // data: [11, 32, 45, 32, 34, 52, 41, 66, 76, 87, 98]
         }],
         chart: {
         height: 350,
